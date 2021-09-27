@@ -1,6 +1,7 @@
 # TestRail Reporter for Cypress
 
-Publishes [Cypress](https://www.cypress.io/) runs on TestRail.
+Publishes [Cypress](https://www.cypress.io/) runs on
+[TestRail](https://www.gurock.com/testrail/).
 
 NOTE: This would've been a proper fork of
 [Vivify-Idea's cypress-testrail-reporter](https://github.com/Vivify-Ideas/cypress-testrail-reporter),
