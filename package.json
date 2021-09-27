@@ -1,0 +1,45 @@
+{
+  "name": "cy-tr-reporter",
+  "version": "1.2.3",
+  "description": "A Testrail reporter for cypress including TestRail API basic library",
+  "main": "index.js",
+  "private": false,
+  "keywords": [
+    "cypress",
+    "testrail",
+    "reporter"
+  ],
+  "author": {
+    "name": "Tzechiu Lei",
+    "email": "tclei2009@gmail.com"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tlei123/cy-tr-reporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tlei123/cy-tr-reporter/issues"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run tsc"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "btoa": "^1.1.2",
+    "chalk": "^2.4.1",
+    "mocha": "^2.2.5",
+    "moment": "^2.22.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.36",
+    "@types/node": "^6.0.58",
+    "chai": "^3.5.0",
+    "rimraf": "^2.5.4",
+    "typescript": "^2.1.4"
+  }
+}
