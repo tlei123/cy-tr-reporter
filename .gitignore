@@ -3,4 +3,5 @@ node-debug*
 .c9/
 *.iml
 .idea/
+.vscode/
 npm-debug.log
