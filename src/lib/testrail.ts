@@ -12,32 +12,32 @@ export class TestRail {
     this.base = `${options.host}/index.php?/api/v2`;
   }
 
-  public getCases () {
-    let url = `${this.base}/get_cases/${this.options.projectId}&suite_id=${this.options.suiteId}`
+  public getCases() {
+    let url = `${this.base}/get_cases/${this.options.projectId}&suite_id=${this.options.suiteId}`;
     if (this.options.groupId) {
-      url += `&section_id=${this.options.groupId}`
+      url += `&section_id=${this.options.groupId}`;
     }
     if (this.options.filter) {
-      url += `&filter=${this.options.filter}`
+      url += `&filter=${this.options.filter}`;
     }
     return axios({
-      method:'get',
+      method: 'get',
       url: url,
-      headers: { 'Content-Type': 'application/json' }, 
+      headers: { 'Content-Type': 'application/json' },
       auth: {
-          username: this.options.username,
-          password: this.options.password
-      } 
+        username: this.options.username,
+        password: this.options.password,
+      },
     })
-      .then(response => response.data.map(item =>item.id))
-      .catch(error => console.error(error));
+      .then((response) => response.data.map((item) => item.id))
+      .catch((error) => console.error(error));
   }
 
-  public async createRun (name: string, description: string) {
-    if (this.options.includeAllInTestRun === false){
+  public async createRun(name: string, description: string) {
+    if (this.options.includeAllInTestRun === false) {
       this.includeAll = false;
-      this.caseIds =  await this.getCases();
-    }  
+      this.caseIds = await this.getCases();
+    }
     axios({
       method: 'post',
       url: `${this.base}/add_run/${this.options.projectId}`,
@@ -51,13 +51,13 @@ export class TestRail {
         name,
         description,
         include_all: this.includeAll,
-        case_ids: this.caseIds
+        case_ids: this.caseIds,
       }),
     })
-      .then(response => {
+      .then((response) => {
         this.runId = response.data.id;
       })
-      .catch(error => console.error(error));
+      .catch((error) => console.error(error));
   }
 
   public deleteRun() {
@@ -69,7 +69,7 @@ export class TestRail {
         username: this.options.username,
         password: this.options.password,
       },
-    }).catch(error => console.error(error));
+    }).catch((error) => console.error(error));
   }
 
   public publishResults(results: TestRailResult[]) {
@@ -83,7 +83,7 @@ export class TestRail {
       },
       data: JSON.stringify({ results }),
     })
-      .then(response => {
+      .then((response) => {
         console.log('\n', chalk.magenta.underline.bold('(TestRail Reporter)'));
         console.log(
           '\n',
@@ -93,7 +93,7 @@ export class TestRail {
           '\n'
         );
       })
-      .catch(error => console.error(error));
+      .catch((error) => console.error(error));
   }
 
   public closeRun() {
@@ -107,6 +107,6 @@ export class TestRail {
       },
     })
       .then(() => console.log('- Test run closed successfully'))
-      .catch(error => console.error(error));
+      .catch((error) => console.error(error));
   }
 }

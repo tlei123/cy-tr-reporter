@@ -1,8 +1,8 @@
-import {reporters} from 'mocha';
+import { reporters } from 'mocha';
 import * as moment from 'moment';
-import {TestRail} from './testrail';
-import {titleToCaseIds} from './shared';
-import {Status, TestRailResult} from './testrail.interface';
+import { TestRail } from './testrail';
+import { titleToCaseIds } from './shared';
+import { Status, TestRailResult } from './testrail.interface';
 const chalk = require('chalk');
 
 export class CypTrReporter extends reporters.Spec {
@@ -35,10 +35,10 @@ export class CypTrReporter extends reporters.Spec {
       this.testRail.createRun(name, description);
     });
 
-    runner.on('pass', test => {
+    runner.on('pass', (test) => {
       const caseIds = titleToCaseIds(test.title);
       if (caseIds.length > 0) {
-        const results = caseIds.map(caseId => {
+        const results = caseIds.map((caseId) => {
           return {
             case_id: caseId,
             status_id: Status.Passed,
@@ -50,10 +50,10 @@ export class CypTrReporter extends reporters.Spec {
       }
     });
 
-    runner.on('fail', test => {
+    runner.on('fail', (test) => {
       const caseIds = titleToCaseIds(test.title);
       if (caseIds.length > 0) {
-        const results = caseIds.map(caseId => {
+        const results = caseIds.map((caseId) => {
           return {
             case_id: caseId,
             status_id: Status.Failed,
