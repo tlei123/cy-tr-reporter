@@ -29,7 +29,7 @@ export class TestRail {
         password: this.options.password,
       },
     })
-      .then((response) => response.data.map((item) => item.id))
+      .then((response) => response.data.cases.map((item) => item.id))
       .catch((error) => console.error(error));
   }
 
