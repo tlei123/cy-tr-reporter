@@ -21,7 +21,7 @@ $ yarn add cy-tr-reporter --dev
 
 ---
 
-[Below is Vivify-Ideas' original README content]
+[Below is Vivify-Ideas\' original README content]
 
 ---
 
