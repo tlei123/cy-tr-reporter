@@ -10,13 +10,13 @@ NOTES:
 ## Install
 
 ```shell
-$ npm install cy-tr-reporter --save-dev
+npm install cy-tr-reporter --save-dev
 ```
 
 or
 
 ```
-$ yarn add cy-tr-reporter --dev
+yarn add cy-tr-reporter --dev
 ```
 
 ---
