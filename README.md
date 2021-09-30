@@ -1,19 +1,29 @@
 # TestRail Reporter for Cypress
 
-Publishes [Cypress](https://www.cypress.io/) runs on
-[TestRail](https://www.gurock.com/testrail/).
+Publishes [Cypress](https://www.cypress.io/) runs on [TestRail](https://www.gurock.com/testrail/).
 
-NOTE: This would've been a proper fork of
-[Vivify-Idea's cypress-testrail-reporter](https://github.com/Vivify-Ideas/cypress-testrail-reporter),
-if I didn't need to actually fix v1.2.3 for the recent breaking API changes from
-TestRail. _This repo_ started as an export of their repo at
-[v.1.2.3](https://github.com/Vivify-Ideas/cypress-testrail-reporter/commit/32ed9b8c47ff2150fd0af68950f186da4c3fc066).
+NOTES:
+
+- Use [Vivify-Ideas' cypress-testrail-reporter](https://github.com/Vivify-Ideas/cypress-testrail-reporter) first, before trying this repo here.
+- This would've been a proper fork of Vivify-Ideas' repo, if I didn't need to actually fix their v1.2.3 for the recent breaking API changes from TestRail. _This repo_ started as an export of their repo at [v.1.2.3](https://github.com/Vivify-Ideas/cypress-testrail-reporter/commit/32ed9b8c47ff2150fd0af68950f186da4c3fc066).
 
 ## Install
 
 ```shell
 $ npm install cy-tr-reporter --save-dev
 ```
+
+or
+
+```
+$ yarn add cy-tr-reporter --dev
+```
+
+---
+
+[Below is Vivify-Ideas' original README content]
+
+---
 
 ## Usage
 
@@ -89,10 +99,9 @@ You can read the whole TestRail documentation [here](http://docs.gurock.com/).
 
 ## Authors
 
-Milutin Savovic - [github](https://github.com/mickosav) - author of the original
-cypress-testrail-reporter (see below). Anes Topcic -
-[github](https://github.com/sakalaca) - author of the fix for API-response
-changes in recent TestRail 7.2 upgrade.
+Tze-chiu Lei - [github](https://github.com/tlei123) - publisher of this repo.
+Milutin Savovic - [github](https://github.com/mickosav) - author of the original cypress-testrail-reporter (see below).
+Anes Topcic - [github](https://github.com/sakalaca) - author of the fix for API-response changes in recent TestRail 7.2 upgrade.
 
 ## License
 
@@ -100,6 +109,5 @@ This project is licensed under the [MIT license](/LICENSE.md).
 
 ## Acknowledgments
 
-- [Vivify-Ideas](https://github.com/vivify-ideas), owner of the
-  [cypress-testrail-reporter](https://github.com/vivify-ideas/cypress-testrail-reporter)
+- [Vivify-Ideas](https://github.com/vivify-ideas), owner of the [cypress-testrail-reporter](https://github.com/vivify-ideas/cypress-testrail-reporter)
   repository, on which this project was based.
