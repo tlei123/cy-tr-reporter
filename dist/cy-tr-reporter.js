@@ -16,9 +16,9 @@ var testrail_1 = require("./testrail");
 var shared_1 = require("./shared");
 var testrail_interface_1 = require("./testrail.interface");
 var chalk = require('chalk');
-var CypTrReporter = /** @class */ (function (_super) {
-    __extends(CypTrReporter, _super);
-    function CypTrReporter(runner, options) {
+var CyTrReporter = /** @class */ (function (_super) {
+    __extends(CyTrReporter, _super);
+    function CyTrReporter(runner, options) {
         var _this = _super.call(this, runner) || this;
         _this.results = [];
         var reporterOptions = options.reporterOptions;
@@ -80,7 +80,7 @@ var CypTrReporter = /** @class */ (function (_super) {
         });
         return _this;
     }
-    CypTrReporter.prototype.validate = function (options, name) {
+    CyTrReporter.prototype.validate = function (options, name) {
         if (options == null) {
             throw new Error('Missing reporterOptions in cypress.json');
         }
@@ -88,7 +88,7 @@ var CypTrReporter = /** @class */ (function (_super) {
             throw new Error("Missing " + name + " value. Please update reporterOptions in cypress.json");
         }
     };
-    return CypTrReporter;
+    return CyTrReporter;
 }(mocha_1.reporters.Spec));
-exports.CypTrReporter = CypTrReporter;
+exports.CyTrReporter = CyTrReporter;
 //# sourceMappingURL=cy-tr-reporter.js.map

@@ -5,7 +5,7 @@ import { titleToCaseIds } from './shared';
 import { Status, TestRailResult } from './testrail.interface';
 const chalk = require('chalk');
 
-export class CypTrReporter extends reporters.Spec {
+export class CyTrReporter extends reporters.Spec {
   private results: TestRailResult[] = [];
   private testRail: TestRail;
 
