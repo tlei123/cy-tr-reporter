@@ -1,15 +1,21 @@
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CyTrReporter = void 0;
 var mocha_1 = require("mocha");
 var moment = require("moment");
 var testrail_1 = require("./testrail");
@@ -38,7 +44,8 @@ var CyTrReporter = /** @class */ (function (_super) {
             _this.testRail.createRun(name, description);
         });
         runner.on('pass', function (test) {
-            var caseIds = shared_1.titleToCaseIds(test.title);
+            var _a;
+            var caseIds = (0, shared_1.titleToCaseIds)(test.title);
             if (caseIds.length > 0) {
                 var results = caseIds.map(function (caseId) {
                     return {
@@ -50,10 +57,10 @@ var CyTrReporter = /** @class */ (function (_super) {
                 });
                 (_a = _this.results).push.apply(_a, results);
             }
-            var _a;
         });
         runner.on('fail', function (test) {
-            var caseIds = shared_1.titleToCaseIds(test.title);
+            var _a;
+            var caseIds = (0, shared_1.titleToCaseIds)(test.title);
             if (caseIds.length > 0) {
                 var results = caseIds.map(function (caseId) {
                     return {
@@ -64,7 +71,6 @@ var CyTrReporter = /** @class */ (function (_super) {
                 });
                 (_a = _this.results).push.apply(_a, results);
             }
-            var _a;
         });
         runner.on('end', function () {
             if (_this.results.length == 0) {
