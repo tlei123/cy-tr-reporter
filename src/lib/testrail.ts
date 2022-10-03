@@ -3,10 +3,10 @@ const chalk = require('chalk');
 import { TestRailOptions, TestRailResult } from './testrail.interface';
 
 export class TestRail {
-  private base: string;
-  private runId: number;
-  private includeAll = true;
-  private caseIds: number[] = [];
+  private base: String;
+  private runId: Number;
+  private includeAll: Boolean = true;
+  private caseIds: Number[] = [];
 
   constructor(private options: TestRailOptions) {
     this.base = `${options.host}/index.php?/api/v2`;
