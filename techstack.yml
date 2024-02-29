@@ -2,7 +2,7 @@ repo_name: tlei123/cy-tr-reporter
 report_id: 6b4a596fc0675ab888fcd4042e2617a2
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T08:50:06+00:00'
+timestamp: '2024-02-29T18:39:18+00:00'
 requested_by: tlei123
 provider: github
 branch: master
@@ -83,7 +83,7 @@ tools:
   last_updated_by: Tze-chiu Lei
   last_updated_on: 2022-10-03 18:50:24.000000000 Z
 - name: Prettier
-  description: 'Prettier is an opinionated code formatter. '
+  description: Prettier is an opinionated code formatter.
   website_url: https://prettier.io/
   version: 2.4.1
   license: MIT
