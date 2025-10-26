@@ -7,6 +7,12 @@ NOTES:
 - Use [Vivify-Ideas' cypress-testrail-reporter](https://github.com/Vivify-Ideas/cypress-testrail-reporter) first, before trying this repo here.
 - This would've been a proper fork of Vivify-Ideas' repo, if I didn't need to actually fix their v1.2.3 for the recent breaking API changes from TestRail. _This repo_ started as an export of their repo at [v.1.2.3](https://github.com/Vivify-Ideas/cypress-testrail-reporter/commit/32ed9b8c47ff2150fd0af68950f186da4c3fc066).
 
+## ⚠️ Deprecation Notice
+
+This project is no longer maintained or supported.
+
+Please consider forking the repository or finding an alternative package that meets your needs. If someone is interested in taking over maintenance, feel free to open an issue to discuss.
+
 ## Install
 
 ```shell
